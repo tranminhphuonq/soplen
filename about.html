@@ -25,6 +25,7 @@
         <!-- Thanh header -->
         <section id="main-header">
             <!-- Logo -->
+            <!-- <a href="index.html"><img height="50" width="180" src="./img/logo.png" alt="logo" /></a> -->
             <a href="index.html">
                 <img
                     width="180"
@@ -38,21 +39,17 @@
                 <ul id="nav-menu">
                     <li><a href="index.html">Trang Chủ</a></li>
                     <li><a href="product2.html">Sản Phẩm</a></li>
-                    <!-- <li><a href="newproduct.html">Hàng Mới</a></li> -->
                     <li><a href="contact.html">Liên Hệ</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <!-- <li>
-                        <a href="#" class="icon-btn" title="Tìm kiếm"><i class="bx bx-search"></i></a>
-                        <a href="love.html" class="icon-btn" title="Yêu thích"><i class="bx bx-heart"></i></a>
-                        <a href="cart.html" class="icon-btn" title="Giỏ hàng"><i class="bx bx-cart"></i></a>
-                    </li> -->
                     <li>
-                        <a href="#" class="icon-btn" title="Tìm kiếm"><i class="bx bx-search"></i></a>
+                        <a href="#" id="search-toggle" class="icon-btn" title="Tìm kiếm"
+                            ><i class="bx bx-search"></i
+                        ></a>
 
-                        <a href="love.html" class="icon-btn" title="Yêu thích">
+                        <a href="account.html" class="icon-btn" title="Tài khoản">
                             <span class="icon-wrapper">
-                                <i class="bx bx-heart"></i>
+                                <i class="bx bx-user"></i>
                                 <span class="badge">0</span>
                             </span>
                         </a>
@@ -77,8 +74,8 @@
             </div> -->
         </section>
         <section id="page-header" class="about-header">
-            <h2>#About us</h2>
-            <p>Read all case studies about our products!</p>
+            <h2>VỀ CHÚNG TÔI</h2>
+            <p>Đọc thêm để biết về sản phẩm của chúng tôi</p>
         </section>
         <section id="about-head" class="section-p1">
             <img src="./img/about/a6.jpg" alt="" />
@@ -116,7 +113,7 @@
             <h1>Download Our <a href="#">App</a></h1>
             <div class="video">
                 <video autoplay muted loop>
-                    <source src="./img/about/1.mp4" type="video/mp4" />
+                    <source src="./img/about/1.mp4." type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -214,5 +211,13 @@
                 <p>© 2025, Shoplen Store - All Rights Reserved</p>
             </div>
         </footer>
+        <!-- Search dropdown -->
+        <div id="search-dropdown">
+            <form action="search.html" method="get">
+                <input type="text" name="q" placeholder="Tìm kiếm sản phẩm..." />
+                <button type="submit"><i class="bx bx-search"></i></button>
+            </form>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>

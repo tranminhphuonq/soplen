@@ -49,11 +49,13 @@
                         <a href="cart.html" class="icon-btn" title="Giỏ hàng"><i class="bx bx-cart"></i></a>
                     </li> -->
                     <li>
-                        <a href="#" class="icon-btn" title="Tìm kiếm"><i class="bx bx-search"></i></a>
+                        <a href="#" id="search-toggle" class="icon-btn" title="Tìm kiếm"
+                            ><i class="bx bx-search"></i
+                        ></a>
 
-                        <a href="love.html" class="icon-btn" title="Yêu thích">
+                        <a href="account.html" class="icon-btn" title="Tài khoản">
                             <span class="icon-wrapper">
-                                <i class="bx bx-heart"></i>
+                                <i class="bx bx-user"></i>
                                 <span class="badge">0</span>
                             </span>
                         </a>
@@ -77,6 +79,13 @@
                 <i id="bar" class="bx bx-menu"></i>
             </div> -->
         </section>
+        <!-- Search dropdown -->
+        <div id="search-dropdown">
+            <form action="search.html" method="get">
+                <input type="text" name="q" placeholder="Tìm kiếm sản phẩm..." />
+                <button type="submit"><i class="bx bx-search"></i></button>
+            </form>
+        </div>
         <!-- Thanh header -->
         <!-- <header class="main-header"> -->
         <!-- 🔶 Logo -->
@@ -209,7 +218,7 @@
                         </div>
                         <div class="vertical"></div>
                         <div class="content">
-                            <h2>Shoplen</h2>
+                            <h2>Soplen</h2>
                             <h1>10% <span>Coupon</span></h1>
                             <p>Valid till 30 April 2025</p>
                         </div>
@@ -285,7 +294,7 @@
                     </a>
                 </div>
                 <div class="pro" onclick="window.location.href='productdetails.html';" style="cursor: pointer">
-                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-heart heart-icon"></i>
                     <img src="./img/sanpham/Group 2.png" alt="" />
                     <div class="des">
                         <span style="color: rgb(160, 160, 155)">cocolen</span>
@@ -625,13 +634,13 @@
                 <h4>crazy deals</h4>
                 <h2>buy 1 get 1 free</h2>
                 <span>the best classic dress is on sale at 50% off</span>
-                <button class="white">Learn More</button>
+                <button class="white" onclick="window.location.href='product1.html';">Learn More</button>
             </div>
             <div class="banner-box banner-box2">
                 <h4>sring/summer</h4>
                 <h2>buy 1 get 1 free</h2>
                 <span>the best classic dress is on sale at 50% off</span>
-                <button class="white" onclick="window.location.href='product.html';">Collection</button>
+                <button class="white" onclick="window.location.href='product1.html';">Collection</button>
             </div>
         </section>
         <section id="banner3" class="section-p1">
@@ -715,6 +724,7 @@
                 <p>© 2025, Shoplen Store - All Rights Reserved</p>
             </div>
         </footer>
+
         <!-- 🔶 Sản phẩm mới -->
         <script src="script.js"></script>
     </body>

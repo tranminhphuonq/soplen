@@ -401,3 +401,34 @@ document.addEventListener('DOMContentLoaded', function () {
 //     showPage(1);
 //     updateActivePage();
 // });
+
+// TRÁI TIM
+// Tìm phần tử trái tim bằng class
+const heartIcon = document.querySelector('.heart-icon'); // Dùng class
+// const heartIcon = document.getElementById('myHeart'); // Hoặc dùng ID nếu bạn đặt id="myHeart"
+// Thêm sự kiện click
+const searchToggle = document.getElementById('search-toggle');
+const searchDropdown = document.getElementById('search-dropdown');
+
+// Toggle khi bấm icon
+searchToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation(); // ngăn lan ra document
+    if (searchDropdown.style.display === 'block') {
+        searchDropdown.style.display = 'none';
+    } else {
+        searchDropdown.style.display = 'block';
+    }
+});
+
+// Ngăn click bên trong dropdown bị tắt
+searchDropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Click ra ngoài để đóng
+document.addEventListener('click', (e) => {
+    if (!searchDropdown.contains(e.target) && e.target !== searchToggle) {
+        searchDropdown.style.display = 'none';
+    }
+});

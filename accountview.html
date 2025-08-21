@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thông tin tài khoản</title>
+        <link rel="icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <!-- 🔶 Thanh thông báo chạy -->
+        <section>
+            <div class="marquee-bar">
+                <div class="marquee-text">
+                    ❄️ SOPLEN NEW GEN - MAX LẠNH PRO HƠN &nbsp;&nbsp;&nbsp; 🚚 Miễn phí vận chuyển đơn từ 399K
+                    &nbsp;&nbsp;&nbsp; 💥 Đổi trả dễ dàng trong 7 ngày &nbsp;&nbsp;&nbsp; 🔥 Hàng mới về mỗi tuần
+                    &nbsp;&nbsp;&nbsp; ❄️ SOPLEN NEW GEN - MAX LẠNH PRO HƠN &nbsp;&nbsp;&nbsp; 🚚 Miễn phí vận chuyển
+                    đơn từ 399K &nbsp;&nbsp;&nbsp; 💥 Đổi trả dễ dàng trong 7 ngày &nbsp;&nbsp;&nbsp; 🔥 Hàng mới về mỗi
+                    tuần
+                </div>
+            </div>
+        </section>
+        <!-- Thanh header -->
+        <section id="main-header">
+            <!-- Logo -->
+            <!-- <a href="index.html"><img height="50" width="180" src="./img/logo.png" alt="logo" /></a> -->
+            <a href="index.html">
+                <img
+                    width="180"
+                    height="50"
+                    src="./img/logo.png"
+                    alt="logo"
+                    style="object-fit: contain; background: transparent"
+                />
+            </a>
+            <div>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="product2.html">Sản Phẩm</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li>
+                        <a href="#" id="search-toggle" class="icon-btn" title="Tìm kiếm"
+                            ><i class="bx bx-search"></i
+                        ></a>
+
+                        <a href="account.html" class="icon-btn" title="Tài khoản">
+                            <span class="icon-wrapper">
+                                <i class="bx bx-user"></i>
+                                <span class="badge">0</span>
+                            </span>
+                        </a>
+
+                        <a href="cart.html" class="icon-btn" title="Giỏ hàng">
+                            <span class="icon-wrapper">
+                                <i class="bx bx-cart"></i>
+                                <span class="badge">0</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Account Section -->
+        <section class="account-section">
+            <div class="container">
+                <div class="account-container">
+                    <!-- Sidebar -->
+                    <div class="account-sidebar">
+                        <h3>Tài Khoản Của Tôi</h3>
+                        <ul class="sidebar-menu">
+                            <li>
+                                <a href="#" class="active"><i class="bx bx-user"></i> Thông tin tài khoản</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bx bx-package"></i> Đơn hàng của tôi</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bx bx-heart"></i> Sản phẩm yêu thích</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bx bx-coin"></i> Điểm thưởng</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bx bx-credit-card"></i> Phương thức thanh toán</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bx bx-map"></i> Sổ địa chỉ</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bx bx-cog"></i> Cài đặt tài khoản</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bx bx-log-out"></i> Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="account-content">
+                        <div class="account-header">
+                            <h2>Thông Tin Tài Khoản</h2>
+                            <a href="#" class="btn">Chỉnh sửa thông tin</a>
+                        </div>
+
+                        <div class="welcome-message">
+                            <h3>Xin chào, Minh Phương!</h3>
+                            <p>
+                                Chào mừng bạn trở lại tài khoản SOPLEN. Từ đây bạn có thể quản lý thông tin cá nhân, đơn
+                                hàng và sở thích của mình.
+                            </p>
+                        </div>
+
+                        <div class="account-grid">
+                            <div class="account-card">
+                                <i class="bx bx-package"></i>
+                                <h3>Đơn Hàng</h3>
+                                <p>Theo dõi và quản lý đơn hàng của bạn</p>
+                                <a href="#" class="btn">Xem đơn hàng</a>
+                            </div>
+
+                            <div class="account-card">
+                                <i class="bx bx-heart"></i>
+                                <h3>Sản Phẩm Yêu Thích</h3>
+                                <p>Xem lại các sản phẩm bạn đã yêu thích</p>
+                                <a href="#" class="btn">Xem danh sách</a>
+                            </div>
+
+                            <div class="account-card">
+                                <i class="bx bx-coin"></i>
+                                <h3>Điểm Thưởng</h3>
+                                <p>Bạn có 1.250 điểm thưởng</p>
+                                <a href="#" class="btn">Chi tiết điểm</a>
+                            </div>
+
+                            <div class="account-card">
+                                <i class="bx bx-map"></i>
+                                <h3>Địa Chỉ</h3>
+                                <p>Quản lý địa chỉ giao hàng của bạn</p>
+                                <a href="#" class="btn">Quản lý địa chỉ</a>
+                            </div>
+                        </div>
+
+                        <div class="recent-orders">
+                            <h3>Đơn Hàng Gần Đây</h3>
+                            <table class="order-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã Đơn Hàng</th>
+                                        <th>Ngày Đặt</th>
+                                        <th>Sản Phẩm</th>
+                                        <th>Tổng Tiền</th>
+                                        <th>Trạng Thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#SOPLEN-12345</td>
+                                        <td>15/11/2023</td>
+                                        <td>Combo 3 cuộn</td>
+                                        <td>1.850.000₫</td>
+                                        <td><span class="status completed">Hoàn thành</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#SOPLEN-12340</td>
+                                        <td>10/11/2023</td>
+                                        <td>Cuộn len basic</td>
+                                        <td>450.000₫</td>
+                                        <td><span class="status processing">Đang xử lý</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#SOPLEN-12338</td>
+                                        <td>05/11/2023</td>
+                                        <td>Mũ len</td>
+                                        <td>720.000₫</td>
+                                        <td><span class="status pending">Chờ xác nhận</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 🔶 Footer -->
+        <footer class="section-p1">
+            <div class="col">
+                <a href="index.html">
+                    <img
+                        width="180"
+                        height="50"
+                        src="./img/logo.png"
+                        alt="logo"
+                        style="object-fit: contain; background: transparent"
+                    />
+                </a>
+                <h4>LIÊN HỆ</h4>
+                <p><strong>Địa chỉ:</strong> Sư Vạn Hạnh, Phường Hòa Hưng, TP Hồ Chí Minh</p>
+                <p><strong>Số điện thoại:</strong> +0899422555</p>
+                <p><strong>Giờ:</strong> 10:00 - 20:00,Thứ hai - Thứ bảy</p>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="bx bxl-facebook-circle" undefined></i>
+                        <i class="bx bxl-instagram"></i>
+                        <i class="bx bxl-twitter"></i>
+                        <i class="bx bxl-pinterest-alt"></i>
+                        <i class="bx bxl-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                <a href="#">Chính sách đổi trả và bảo hành</a>
+                <a href="#">Chính sách Menbership</a>
+                <a href="#">Chính sách ưu đãi sinh nhật</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Chính sách giao hàng</a>
+            </div>
+            <div class="col">
+                <h4>TÀI KHOẢN CỦA TÔI</h4>
+                <a href="#">Đăng nhập</a>
+                <a href="#">Xem giỏ hàng</a>
+                <a href="#">Danh sách yêu thích</a>
+                <a href="#">Theo dõi đơn hàng</a>
+                <a href="#">Hỗ trợ</a>
+            </div>
+            <div class="col install">
+                <h4>TẢI APP</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="./img/pay/app.jpg" alt="" />
+                    <img src="/img/pay/play.jpg" alt="" />
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="./img/pay/pay.png" alt="" />
+            </div>
+            <div class="copyright">
+                <p>© 2025, Shoplen Store - All Rights Reserved</p>
+            </div>
+        </footer>
+        <!-- Search dropdown -->
+        <div id="search-dropdown">
+            <form action="search.html" method="get">
+                <input type="text" name="q" placeholder="Tìm kiếm sản phẩm..." />
+                <button type="submit"><i class="bx bx-search"></i></button>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

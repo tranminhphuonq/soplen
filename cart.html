@@ -25,11 +25,20 @@
         <!-- Thanh header -->
         <section id="main-header">
             <!-- Logo -->
-            <a href="index.html"><img height="50" width="180" src="./img/logo.png" alt="logo" /></a>
+            <!-- <a href="index.html"><img height="50" width="180" src="./img/logo.png" alt="logo" /></a> -->
+            <a href="index.html">
+                <img
+                    width="180"
+                    height="50"
+                    src="./img/logo.png"
+                    alt="logo"
+                    style="object-fit: contain; background: transparent"
+                />
+            </a>
             <div>
                 <ul id="nav-menu">
                     <li><a href="index.html">Trang Chủ</a></li>
-                    <li><a href="product.html">Sản Phẩm</a></li>
+                    <li><a href="product2.html">Sản Phẩm</a></li>
                     <li><a href="contact.html">Liên Hệ</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -39,11 +48,11 @@
                         <a href="cart.html" class="icon-btn" title="Giỏ hàng"><i class="bx bx-cart"></i></a>
                     </li> -->
                     <li>
-                        <a href="#" class="icon-btn" title="Tìm kiếm"><i class="bx bx-search"></i></a>
+                        <a href="#" id="search-toggle" class="icon-btn" title="Tìm kiếm"><i class="bx bx-search"></i></a>
 
-                        <a href="love.html" class="icon-btn" title="Yêu thích">
+                        <a href="account.html" class="icon-btn" title="Tài khoản">
                             <span class="icon-wrapper">
-                                <i class="bx bx-heart"></i>
+                                <i class="bx bx-user"></i>
                                 <span class="badge">0</span>
                             </span>
                         </a>
@@ -67,8 +76,8 @@
                 <i id="bar" class="bx bx-menu"></i>
             </div> -->
         </section>
-        <section id="page-header" class="about-header">
-            <h2>#Giỏ hàng</h2>
+        <section id="page-header" class="cart-header">
+            <h2>GIỎ HÀNG</h2>
             <p>add your coupon code & SAVE upto 70%</p>
         </section>
         <!-- 🔶 Giỏ hàng -->
@@ -143,16 +152,23 @@
         <!-- 🔶 Footer -->
         <footer class="section-p1">
             <div class="col">
-                <img class="logo" height="50" width="180" src="./img/logo.png" alt="" />
-                <h4>Contact</h4>
-                <p><strong>Address:</strong> hcm city</p>
-                <p><strong>Phone:</strong> +0899422555</p>
-                <p><strong>Hours:</strong> 10:00 - 20:00, Mon - Sat</p>
-
+                <a href="index.html">
+                    <img
+                        width="180"
+                        height="50"
+                        src="./img/logo.png"
+                        alt="logo"
+                        style="object-fit: contain; background: transparent"
+                    />
+                </a>
+                <h4>LIÊN HỆ</h4>
+                <p><strong>Địa chỉ:</strong> Sư Vạn Hạnh, Phường Hòa Hưng, TP Hồ Chí Minh</p>
+                <p><strong>Số điện thoại:</strong> +0899422555</p>
+                <p><strong>Giờ:</strong> 10:00 - 20:00,Thứ hai - Thứ bảy</p>
                 <div class="follow">
                     <h4>Follow us</h4>
                     <div class="icon">
-                        <i class="bx bxl-facebook"></i>
+                        <i class="bx bxl-facebook-circle" undefined></i>
                         <i class="bx bxl-instagram"></i>
                         <i class="bx bxl-twitter"></i>
                         <i class="bx bxl-pinterest-alt"></i>
@@ -161,29 +177,27 @@
                 </div>
             </div>
             <div class="col">
-                <h4>About</h4>
-                <a href="#">About Us</a>
-                <a href="#">Delivery Information</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Contact Us</a>
+                <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                <a href="#">Chính sách đổi trả và bảo hành</a>
+                <a href="#">Chính sách Menbership</a>
+                <a href="#">Chính sách ưu đãi sinh nhật</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Chính sách giao hàng</a>
             </div>
-
             <div class="col">
-                <h4>My Account</h4>
-                <a href="#">Sign In</a>
-                <a href="#">View Cart</a>
-                <a href="#">My Wishlist</a>
-                <a href="#">Track My Order</a>
-                <a href="#">Help</a>
+                <h4>TÀI KHOẢN CỦA TÔI</h4>
+                <a href="#">Đăng nhập</a>
+                <a href="#">Xem giỏ hàng</a>
+                <a href="#">Danh sách yêu thích</a>
+                <a href="#">Theo dõi đơn hàng</a>
+                <a href="#">Hỗ trợ</a>
             </div>
-
             <div class="col install">
-                <h4>Install App</h4>
+                <h4>TẢI APP</h4>
                 <p>From App Store or Google Play</p>
                 <div class="row">
                     <img src="./img/pay/app.jpg" alt="" />
-                    <img src="./img/pay/play.jpg" alt="" />
+                    <img src="/img/pay/play.jpg" alt="" />
                 </div>
                 <p>Secured Payment Gateways</p>
                 <img src="./img/pay/pay.png" alt="" />
@@ -192,5 +206,13 @@
                 <p>© 2025, Shoplen Store - All Rights Reserved</p>
             </div>
         </footer>
+         <!-- Search dropdown -->
+        <div id="search-dropdown">
+            <form action="search.html" method="get">
+                <input type="text" name="q" placeholder="Tìm kiếm sản phẩm..." />
+                <button type="submit"><i class="bx bx-search"></i></button>
+            </form>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>

@@ -149,7 +149,9 @@
                         <a href="cart.html" class="icon-btn" title="Giỏ hàng"><i class="bx bx-cart"></i></a>
                     </li> -->
                     <li>
-                        <a href="#" class="icon-btn" title="Tìm kiếm"><i class="bx bx-search"></i></a>
+                        <a href="#" id="search-toggle" class="icon-btn" title="Tìm kiếm"
+                            ><i class="bx bx-search"></i
+                        ></a>
 
                         <a href="love.html" class="icon-btn" title="Yêu thích">
                             <span class="icon-wrapper">
@@ -927,6 +929,13 @@
                 <p>© 2025, Shoplen Store - All Rights Reserved</p>
             </div>
         </footer>
+        <!-- Search dropdown -->
+        <div id="search-dropdown">
+            <form action="search.html" method="get">
+                <input type="text" name="q" placeholder="Tìm kiếm sản phẩm..." />
+                <button type="submit"><i class="bx bx-search"></i></button>
+            </form>
+        </div>
         <script src="./script.js"></script>
         <!-- <script>
             const productList = document.getElementById('product-list');

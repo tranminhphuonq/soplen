@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thanh Tìm Kiếm Dropdown</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            body {
+                background-color: #f8f9fa;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            /* Header */
+            header {
+                background-color: #fff;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .header-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            .logo {
+                font-size: 28px;
+                font-weight: 700;
+                color: #2c3e50;
+                text-decoration: none;
+            }
+
+            .logo span {
+                color: #e74c3c;
+            }
+
+            nav ul {
+                display: flex;
+                list-style: none;
+            }
+
+            nav ul li {
+                margin-left: 30px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #2c3e50;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+
+            nav ul li a:hover {
+                color: #e74c3c;
+            }
+
+            .icon-btn {
+                font-size: 1.5rem;
+                color: #2c3e50;
+                margin-left: 15px;
+                cursor: pointer;
+            }
+
+            /* Search Dropdown */
+            .search-dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .search-container {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 400px;
+                background: white;
+                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+                border-radius: 0 0 8px 8px;
+                z-index: 1000;
+                display: none;
+                transform: translateY(-10px);
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .search-container.active {
+                display: block;
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .search-header {
+                padding: 20px;
+                border-bottom: 1px solid #eee;
+                display: flex;
+                align-items: center;
+            }
+
+            .search-input {
+                flex: 1;
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+
+            .search-input:focus {
+                border-color: #3498db;
+            }
+
+            .search-close {
+                margin-left: 10px;
+                background: none;
+                border: none;
+                font-size: 20px;
+                cursor: pointer;
+                color: #95a5a6;
+            }
+
+            .search-body {
+                padding: 20px;
+            }
+
+            .search-title {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #2c3e50;
+            }
+
+            .search-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .search-tag {
+                padding: 8px 15px;
+                background: #f8f9fa;
+                border-radius: 20px;
+                font-size: 14px;
+                color: #2c3e50;
+                text-decoration: none;
+                transition: all 0.3s;
+            }
+
+            .search-tag:hover {
+                background: #3498db;
+                color: white;
+            }
+
+            .search-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                display: none;
+            }
+
+            .search-overlay.active {
+                display: block;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .search-container {
+                    width: 300px;
+                    right: -50px;
+                }
+
+                nav ul li {
+                    margin-left: 15px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .search-container {
+                    width: 280px;
+                    right: -80px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <a href="#" class="logo">ICON <span>DENIM</span></a>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Trang Chủ</a></li>
+                            <li><a href="#">Sản Phẩm</a></li>
+                            <li><a href="#">Liên Hệ</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li>
+                                <div class="search-dropdown">
+                                    <i class="fas fa-search icon-btn" id="search-toggle"></i>
+                                    <div class="search-container" id="search-container">
+                                        <div class="search-header">
+                                            <input
+                                                type="text"
+                                                class="search-input"
+                                                placeholder="Tìm kiếm sản phẩm..."
+                                            />
+                                            <button class="search-close" id="search-close">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="search-body">
+                                            <h4 class="search-title">Từ khóa nổi bật</h4>
+                                            <div class="search-tags">
+                                                <a href="#" class="search-tag">Áo thun</a>
+                                                <a href="#" class="search-tag">Quần jeans</a>
+                                                <a href="#" class="search-tag">Áo khoác</a>
+                                                <a href="#" class="search-tag">Đầm</a>
+                                                <a href="#" class="search-tag">Giày</a>
+                                                <a href="#" class="search-tag">Túi xách</a>
+                                                <a href="#" class="search-tag">Phụ kiện</a>
+                                                <a href="#" class="search-tag">Bộ sưu tập mới</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="icon-btn" title="Tài khoản">
+                                    <i class="fas fa-user"></i>
+                                </a>
+                                <a href="#" class="icon-btn" title="Giỏ hàng">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-overlay" id="search-overlay"></div>
+
+        <!-- Main Content -->
+        <main style="padding: 60px 0; text-align: center">
+            <div class="container">
+                <h1>Trang Web Mẫu</h1>
+                <p>Nhấn vào biểu tượng kính lúp để mở thanh tìm kiếm dropdown</p>
+                <p>Thanh tìm kiếm sẽ sổ xuống từ trên xuống với hiệu ứng mượt mà</p>
+            </div>
+        </main>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const searchToggle = document.getElementById('search-toggle');
+                const searchContainer = document.getElementById('search-container');
+                const searchClose = document.getElementById('search-close');
+                const searchOverlay = document.getElementById('search-overlay');
+
+                // Mở thanh tìm kiếm
+                searchToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    searchContainer.classList.toggle('active');
+                    searchOverlay.classList.toggle('active');
+                });
+
+                // Đóng thanh tìm kiếm khi click nút đóng
+                searchClose.addEventListener('click', function () {
+                    searchContainer.classList.remove('active');
+                    searchOverlay.classList.remove('active');
+                });
+
+                // Đóng thanh tìm kiếm khi click bên ngoài
+                searchOverlay.addEventListener('click', function () {
+                    searchContainer.classList.remove('active');
+                    searchOverlay.classList.remove('active');
+                });
+
+                // Ngăn sự kiện click trên thanh tìm kiếm lan ra ngoài
+                searchContainer.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+
+                // Đóng thanh tìm kiếm khi nhấn phím Esc
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape') {
+                        searchContainer.classList.remove('active');
+                        searchOverlay.classList.remove('active');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
